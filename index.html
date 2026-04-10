@@ -17,12 +17,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header" id="top">
       <div class="container nav">
         <a class="brand" href="#top">EuroBridge Rubber</a>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">☰</button>
         <nav>
-          <ul class="nav-links">
+          <ul class="nav-links" id="primary-nav">
             <li><a href="#about">About</a></li>
             <li><a href="#categories">Categories</a></li>
             <li><a href="#services">Services</a></li>
@@ -34,7 +35,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="container hero-grid">
           <div>
@@ -249,7 +250,7 @@
               countries, and we will prepare a practical representation plan.
             </p>
           </div>
-          <form class="contact-form" onsubmit="return false;" aria-label="Representation inquiry form">
+          <form class="contact-form" id="contact-form" aria-label="Representation inquiry form">
             <label>
               Full Name
               <input type="text" name="full_name" placeholder="Your name" required />
@@ -277,6 +278,7 @@
               <textarea name="message" rows="4" placeholder="Tell us about your catalog and goals"></textarea>
             </label>
             <button class="btn btn-primary" type="submit">Send Inquiry</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
