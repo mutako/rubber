@@ -72,6 +72,13 @@ body {
   color: var(--brand);
 }
 
+.nav-links a:focus-visible,
+.btn:focus-visible,
+.text-link:focus-visible {
+  outline: 2px solid #9db8f5;
+  outline-offset: 2px;
+}
+
 .menu-toggle {
   display: none;
   border: 1px solid var(--line);

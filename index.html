@@ -249,22 +249,22 @@
               countries, and we will prepare a practical representation plan.
             </p>
           </div>
-          <form class="contact-form" onsubmit="return false;">
+          <form class="contact-form" onsubmit="return false;" aria-label="Representation inquiry form">
             <label>
               Full Name
-              <input type="text" placeholder="Your name" required />
+              <input type="text" name="full_name" placeholder="Your name" required />
             </label>
             <label>
               Company
-              <input type="text" placeholder="Company name" required />
+              <input type="text" name="company" placeholder="Company name" required />
             </label>
             <label>
               Email
-              <input type="email" placeholder="name@company.com" required />
+              <input type="email" name="email" placeholder="name@company.com" required />
             </label>
             <label>
               Main Product Category
-              <select required>
+              <select name="category" required>
                 <option value="">Select a category</option>
                 <option>Sport Courts</option>
                 <option>Gym Flooring</option>
@@ -274,7 +274,7 @@
             </label>
             <label>
               Message
-              <textarea rows="4" placeholder="Tell us about your catalog and goals"></textarea>
+              <textarea name="message" rows="4" placeholder="Tell us about your catalog and goals"></textarea>
             </label>
             <button class="btn btn-primary" type="submit">Send Inquiry</button>
           </form>
